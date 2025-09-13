@@ -1,0 +1,10 @@
+## API ##
+- get: pega
+- post: posta
+- delete: deleta
+- put: atualiza
+
+# quando um app não é online e quando ele é #a
+ 
+ - instalar configurações de ambiente
+ 

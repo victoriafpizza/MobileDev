@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 // Import React {useEffect, useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import axios from 'axios';
+import { ActivityIndicator } from 'react-native/types_generated/index';
 export default function App() {
 
 type Post = {
@@ -21,6 +22,20 @@ useEffect (() => { //problema do react
   .then(response => setPost (response.data)); //agora o type script entende o tipo que ta retornando
 
 }, []);
+
+//renderiza um indicador de carregamento enquanto os dados estão sendo buscados 
+if(!post){
+  return<ActivityIndicator size={"large" color="#ff66cc"}/>;
+}
+
+//renderiza os dados do post
+return(
+  <View style={styles.container}>
+    <Text style={styles.title}>{post.title}</Text>
+    <Text style={styles.body}>{post.body}</Text>
+  </View>
+)
+
 
   return (
     <View style={styles.container}>

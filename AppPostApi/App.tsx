@@ -36,6 +36,26 @@ return(
   </View>
 )
 
+//define os estilos que iremos utilizar no aplicativo
+const Styles = StyleSheet.create({
+    container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: 'center';
+    justifyContent: 'center'
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  body: {
+    fontSize: 18
+  },
+
+)
+})
+
 
   return (
     <View style={styles.container}>
